@@ -3,7 +3,7 @@
 Angular package to style element borders with css gradients and animations.
 
 ## Preview
-[Example in Stackblitz](https://stackblitz.com/edit/angular-tyjsgy)
+[Example in Stackblitz](https://stackblitz.com/edit/angular-animated-border)
 
 ## Installation
 #### npm
