@@ -1,0 +1,12 @@
+{
+  "name": "ng-animated-border",
+  "version": "1.0.0",
+  "author": "Max Hedt",
+  "description": "Angular package to style element borders with css gradients and animations.",
+  "keywords": ["angular", "css", "scss", "border", "animation", "gradient"],
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "^8.1.0",
+    "@angular/core": "^8.1.0"
+  }
+}

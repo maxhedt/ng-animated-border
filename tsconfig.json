@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declaration": true,
+    "stripInternal": true,
+    "experimentalDecorators": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "paths": {
+      "@angular/core": [
+        "node_modules/@angular/core"
+      ],
+      "rxjs/*": [
+        "node_modules/rxjs/*"
+      ],
+      "ng-animated-border": [
+        "dist/ng-animated-border"
+      ],
+      "ng-animated-border/*": [
+        "dist/ng-animated-border/*"
+      ]
+    },
+    "rootDir": ".",
+    "outDir": "dist",
+    "sourceMap": true,
+    "inlineSources": true,
+    "target": "es5",
+    "skipLibCheck": true,
+    "lib": [
+      "es2015",
+      "dom"
+    ]
+  },
+  "angularCompilerOptions": {
+    "strictMetadataEmit": true
+  }
+}

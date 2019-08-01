@@ -1,0 +1,38 @@
+<div>
+    <div>
+        <div style="z-index: 2;" class="main anim" ngAnimatedBorder [abBorderWidth]="['10px']" [abBackgroundColor]="'ghostwhite'" [abPauseAnimation]="pauseAnimation">
+            <h1 *ngIf="true">Hello</h1>
+        </div>
+
+        <div class="main" style="background: ghostwhite; border: 10px solid black">
+            <h1 *ngIf="true">Hello</h1>
+        </div>
+    </div>
+
+
+    <div>
+        <p class="main anim" ngAnimatedBorder [abBorderWidth]="['10px']" [abBackgroundColor]="'ghostwhite'" [abPauseAnimation]="!pauseAnimation">
+            Hello
+        </p>
+
+        <p class="main" style="background: ghostwhite; border: 10px solid black">
+            Hello
+        </p>
+    </div>
+
+    <div>
+        <span class="main anim" ngAnimatedBorder [abBorderWidth]="['10px']" [abBorderRadius]="['50%']"
+              [abBackgroundColor]="'ghostwhite'">
+            <span>Hello</span>
+        </span>
+
+        <span class="main" style="background: ghostwhite; border: 10px solid black; border-radius: 50%">
+            <span>Hello</span>
+        </span>
+    </div>
+</div>
+<div>
+    <button (click)="pauseAnimation = !pauseAnimation">test {{pauseAnimation}}</button>
+</div>
+
+<router-outlet></router-outlet>
