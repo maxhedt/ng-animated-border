@@ -1,13 +1,14 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {AnimatedBorderDirective} from './animated-border.directive';
+import { AnimatedBorderWrapperDirective } from './animated-border-wrapper.directive';
 
 @NgModule({
-    declarations: [AnimatedBorderDirective],
+    declarations: [AnimatedBorderDirective, AnimatedBorderWrapperDirective],
     imports: [
         CommonModule
     ],
-    exports: [AnimatedBorderDirective]
+    exports: [AnimatedBorderDirective, AnimatedBorderWrapperDirective]
 })
 export class NgAnimatedBorderModule {
 }

@@ -5,33 +5,26 @@ Angular package to style element borders with css gradients and animations.
 ## Preview
 [Example in Stackblitz](https://stackblitz.com/edit/angular-animated-border)
 
-## Installation
-#### npm
-
-- npm install ng-animated-border
-
-#### yarn 
-
-- yarn add ng-animated-border
-
 ## Basic Usage
 
 - Import the `NgAnimatedBorderModule` to your module.
 
-- Add the `ngAnimatedBorder` directive to your `[div, span, p, a]` element.
+- Add the `ngAnimatedBorder` directive to your `[div, span, p, a, img]` element.
 
 - Add a background animation to your element. This animation will be the border animation.
 ````html
-<span ngAnimatedBorder class="myCssAnimation" [abBorderWidth]="['2px']">
-    <span>Magic</span>
-</span>
+<div ngAnimatedBorderWrapper>
+    <span ngAnimatedBorder class="myCssAnimation">
+        Magic
+    </span>
+</div>
 ````
 
 ````css
 .myCssAnimation {
-    background: linear-gradient(270deg, #e922e9, #f75d21, #5543f7, #00dbff, #92db32);
-    background-size: 600% 600%;
-    animation: borderAnimation 4s ease infinite;
+    background: linear-gradient(270deg, #e922e9, #f75d21, #5543f7);
+    background-size: 200% 200%;
+    animation: borderAnimation 4s ease-in-out infinite;
 }
 
 @keyframes borderAnimation {
@@ -56,7 +49,7 @@ abBackgroundColor: string = 'white';
 - sets the borderWidth for: 1. all borders; 2: vertical, horizontal borders; 3: top, right, bottom, left border
 - you can use any (s)css unit
 ````typescript
-abBorderWidth: [string] | [string, string] | [string, string, string, string] = ['0px'];
+abBorderWidth: [string] | [string, string] | [string, string, string, string] = ['1px'];
 ````
 
 #### [abBorderRadius]
@@ -73,5 +66,5 @@ abPauseAnimation: boolean = false;
 ````
 
 ## Notes
-- Please wrap the hostelement with the directive properly.
-- Otherwise, modified css properties on the host element can lead to unintended results.
+- Wrap the element with the `ngAnimatedBorder` directive with an element containing the `ngAnimatedBorderWrapper` directive.
+- Not using the `ngAnimatedBorderWrapper` directive can lead to unintended results.
